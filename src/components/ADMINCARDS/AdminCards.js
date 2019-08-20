@@ -37,7 +37,7 @@ class AdminCards extends Component {
 
   componentWillMount() {
     axios
-      .get("http://localhost:3333/all")
+      .get("https://app-ticket-back.herokuapp.com/all")
       .then(response => {
         console.log("response usercards", response);
         this.setState({
