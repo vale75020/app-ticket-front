@@ -24,7 +24,7 @@ class NewCard extends Component {
     };
     console.log(newCard);
     axios
-      .post("http://localhost:3333/add", newCard) // post pour registrer les données
+      .post("https://app-ticket-back.herokuapp.com/add", newCard) // post pour registrer les données
       .then(response => {
         console.log("in then", response);
         this.setState({

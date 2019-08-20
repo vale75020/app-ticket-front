@@ -52,7 +52,7 @@ class AdminCards extends Component {
   handleDelete = id => {
     console.log(id);
     axios
-      .delete(`http://localhost:3333/${id}`, {})
+      .delete(`https://app-ticket-back.herokuapp.com/${id}`, {})
       .then(response => {
         alert("card deleted");
         this.componentWillMount();
@@ -74,7 +74,7 @@ class AdminCards extends Component {
       })
     }, () => {
       axios
-      .put(`http://localhost:3333/${cardId}`, { status : statusCard  })
+      .put(`https://app-ticket-back.herokuapp.com/${cardId}`, { status : statusCard  })
       .then(response => {
         console.log("card updated posted to back, response", response);
       })

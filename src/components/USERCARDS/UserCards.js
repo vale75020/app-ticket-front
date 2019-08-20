@@ -33,7 +33,7 @@ export default class UserCards extends Component {
 
   componentWillMount() {
     axios
-      .get("http://localhost:3333/mycards")
+      .get("https://app-ticket-back.herokuapp.com/mycards")
       .then(response => {
         console.log("response usercards", response);
         this.setState({
@@ -49,7 +49,7 @@ export default class UserCards extends Component {
   handleDelete = id => {
     //console.log(id);
     axios
-      .delete(`http://localhost:3333/${id}`, {})
+      .delete(`https://app-ticket-back.herokuapp.com/${id}`, {})
       .then(response => {
         alert("card deleted");
         // this.setState({ cards: this.state.cards })
