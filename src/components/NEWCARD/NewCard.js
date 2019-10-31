@@ -28,7 +28,7 @@ class NewCard extends Component {
       .then(response => {
         console.log("in then", response);
         this.setState({
-          cardCreate: "La carte a été créée", // confirmation creation card
+          cardCreate: "Card created", // confirmation creation card
           title: "",
           text: "",
           status: "",
@@ -37,7 +37,7 @@ class NewCard extends Component {
       })
       .catch(err => {
         this.setState({
-          err: "La card existe deja",
+          err: "Card already exists",
           cardCreate: ""
         });
       });
@@ -76,7 +76,7 @@ class NewCard extends Component {
               <button type="submit">Register</button>
 
               {this.state.cardCreate ? (
-                <div style={{ color: "white" }}>La card a été crée</div>
+                <div style={{ color: "white" }}>Card created</div>
               ) : (
                 ""
               )}
